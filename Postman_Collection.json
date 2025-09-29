@@ -1,0 +1,207 @@
+{
+  "info": {
+    "name": "Bank Challenge - Posts API (Quarkus)",
+    "_postman_id": "12345678-9abc-def0-1234-56789abcdef0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /posts (v1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "change-me"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/posts?limit=5&includeComments=true",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            },
+            {
+              "key": "includeComments",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /v2/posts (search/sort/page)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "change-me"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/v2/posts?q=sunt&sortBy=commentCount&order=desc&page=1&size=10",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "v2",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "sunt"
+            },
+            {
+              "key": "sortBy",
+              "value": "commentCount"
+            },
+            {
+              "key": "order",
+              "value": "desc"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /v2/posts/{id}",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "change-me"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/v2/posts/1?includeComments=true",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "v2",
+            "posts",
+            "1"
+          ],
+          "query": [
+            {
+              "key": "includeComments",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /v2/posts/users/{userId}",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "change-me"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/v2/posts/users/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "v2",
+            "posts",
+            "users",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /v2/posts/stats",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "change-me"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/v2/posts/stats",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "v2",
+            "posts",
+            "stats"
+          ]
+        }
+      }
+    },
+    {
+      "name": "OpenAPI",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/q/swagger-ui",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "q",
+            "swagger-ui"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/health",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Metrics",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/q/metrics",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "q",
+            "metrics"
+          ]
+        }
+      }
+    }
+  ]
+}
